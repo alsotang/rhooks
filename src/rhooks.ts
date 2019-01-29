@@ -33,12 +33,12 @@ export function useWillUnmount(fn: TEffectFunc) {
 }
 
 // Force component rerender
-export function useForceUpdate() {
+export function useForceRender() {
     const [, setTick] = useState(null);
 
-    const forceUpdate = useCallback(() => {
+    const forceRender = useCallback(() => {
         setTick(null);
     }, []);
 
-    return forceUpdate;
+    return forceRender;
 }

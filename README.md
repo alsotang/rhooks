@@ -65,15 +65,15 @@ function App(props) {
 }
 ```
 
-### useForceUpdate(fn)
+### useForceRender(fn)
 
 Force component rerender
 
 ```js
 function App(props) {
-  const forceUpdate = useForceUpdate()
+  const forceRender = useForceRender()
 
-  return (<div onClick="() => forceUpdate()">{Date.now()}</div>);
+  return (<div onClick="() => forceRender()">{Date.now()}</div>);
 }
 ```
 

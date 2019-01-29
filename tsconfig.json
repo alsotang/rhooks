@@ -13,8 +13,10 @@
       "noUnusedParameters": false,
       "noImplicitAny": true,
       "noImplicitThis": true,
-      "declaration": true
+      "declaration": true,
+      "jsx": "react",
+      "lib": ["es6", "dom"]
   },
-  "include": ["src/**/*", "test/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

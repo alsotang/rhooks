@@ -1,19 +1,28 @@
 {
   "name": "rhooks",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "custom react hooks including class lifecycle style",
-  "main": "main.js",
+  "main": "lib/rhooks.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "test-travis": "jest",
+    "build": "tsc"
   },
   "author": "alsotang <alsotang@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/alsotang/rhooks",
   "peerDependencies": {
     "react": "16.8.0-alpha.1"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.13",
     "@types/react": "^16.7.22",
+    "jest": "23.x",
+    "react-testing-library": "^5.4.4",
+    "ts-jest": "23.x",
     "tslint": "^5.12.1",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1"
   }
 }
