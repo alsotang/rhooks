@@ -5,7 +5,7 @@
   "main": "lib/rhooks.js",
   "scripts": {
     "test": "jest --watch",
-    "test-travis": "jest",
+    "test-travis": "jest --coverage",
     "build": "tsc"
   },
   "author": "alsotang <alsotang@gmail.com>",
@@ -17,12 +17,13 @@
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/react": "^16.7.22",
+    "coveralls": "^3.0.2",
     "jest": "23.x",
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1",
     "react-testing-library": "^5.4.4",
     "ts-jest": "23.x",
     "tslint": "^5.12.1",
-    "typescript": "^3.2.4",
-    "react": "16.8.0-alpha.1",
-    "react-dom": "16.8.0-alpha.1"
+    "typescript": "^3.2.4"
   }
 }

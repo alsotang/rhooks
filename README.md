@@ -1,5 +1,9 @@
 ## React custom hooks
 
+[![Build Status](https://travis-ci.org/alsotang/rhooks.svg?branch=master)](https://travis-ci.org/alsotang/rhooks)
+
+[![Coverage Status](https://coveralls.io/repos/github/alsotang/rhooks/badge.svg?branch=master)](https://coveralls.io/github/alsotang/rhooks?branch=master)
+
 There is a collection of React custom hooks, including lifecycle style hooks simulating `constructor`, `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`
 
 ## Install
