@@ -108,9 +108,16 @@ describe("useWillUnmount", () => {
 describe("useForceRender", () => {
   it("should render 5 times", () => {
     let renderCount = 0;
+    let prevForceRender: () => void;
     const App = () => {
       renderCount++;
       const forceRender = useForceRender();
+
+      if (prevForceRender) {
+        expect(prevForceRender).toEqual(forceRender);
+      }
+
+      prevForceRender = forceRender;
 
       return (<div onClick={() => forceRender()}></div>);
     };

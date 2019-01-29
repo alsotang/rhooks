@@ -1,34 +1,34 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-type TEffectFunc = () => void;
+type TVoidFn = () => void;
 
 // Like in a constructor. Only run once when the function component init.
-export function useConstructor(fn: TEffectFunc) {
+export function useConstructor(fn: TVoidFn) {
     useState(fn);
 }
 
 // Like componentDidMount
-export function useDidMount(fn: TEffectFunc) {
+export function useDidMount(fn: TVoidFn) {
     useEffect(() => {
         fn();
     }, []);
 }
 
 // Like componentDidUpdate.
-export function useDidUpdate(fn: TEffectFunc) {
-    const runOnceRef = useRef(false);
+export function useDidUpdate(fn: TVoidFn) {
+    const firstRunRef = useRef(true);
 
     useEffect(() => {
-        if (runOnceRef.current) {
-            fn();
+        if (firstRunRef.current) {
+            firstRunRef.current = false;
         } else {
-            runOnceRef.current = true;
+            fn();
         }
     });
 }
 
 // Like componentWillUnmount
-export function useWillUnmount(fn: TEffectFunc) {
+export function useWillUnmount(fn: TVoidFn) {
     useEffect(() => fn, []);
 }
 
