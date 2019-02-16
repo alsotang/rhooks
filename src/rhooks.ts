@@ -34,10 +34,10 @@ export function useWillUnmount(fn: TVoidFn) {
 
 // Force component rerender
 export function useForceRender() {
-    const [, setTick] = useState(null);
+    const [, setTick] = useState(true);
 
     const forceRender = useCallback(() => {
-        setTick(null);
+        setTick((v) => !v);
     }, []);
 
     return forceRender;

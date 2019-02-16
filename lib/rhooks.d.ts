@@ -1,7 +1,7 @@
-declare type TEffectFunc = () => void;
-export declare function useConstructor(fn: TEffectFunc): void;
-export declare function useDidMount(fn: TEffectFunc): void;
-export declare function useDidUpdate(fn: TEffectFunc): void;
-export declare function useWillUnmount(fn: TEffectFunc): void;
+declare type TVoidFn = () => void;
+export declare function useConstructor(fn: TVoidFn): void;
+export declare function useDidMount(fn: TVoidFn): void;
+export declare function useDidUpdate(fn: TVoidFn): void;
+export declare function useWillUnmount(fn: TVoidFn): void;
 export declare function useForceRender(): () => void;
 export {};

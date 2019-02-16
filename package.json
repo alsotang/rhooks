@@ -1,6 +1,6 @@
 {
   "name": "rhooks",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "custom react hooks including class lifecycle style",
   "main": "lib/rhooks.js",
   "scripts": {
@@ -12,16 +12,16 @@
   "license": "MIT",
   "repository": "https://github.com/alsotang/rhooks",
   "peerDependencies": {
-    "react": "16.8.0-alpha.1"
+    "react": "^16.8.0"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
-    "@types/react": "^16.7.22",
+    "@types/react": "^16.8.0",
     "coveralls": "^3.0.2",
     "jest": "23.x",
-    "react": "16.8.0-alpha.1",
-    "react-dom": "16.8.0-alpha.1",
-    "react-testing-library": "^5.4.4",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-testing-library": "^5.8.0",
     "ts-jest": "23.x",
     "tslint": "^5.12.1",
     "typescript": "^3.2.4"

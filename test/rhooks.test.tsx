@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEffect } from "react";
-import { cleanup, fireEvent, flushEffects, render } from "react-testing-library";
+import { cleanup, fireEvent, render } from "react-testing-library";
 import { useConstructor, useDidMount, useDidUpdate, useForceRender, useWillUnmount } from "../src/rhooks";
 
 afterEach(cleanup);
@@ -78,8 +78,6 @@ describe("useDidUpdate", () => {
     const { rerender } = render(<App />);
     rerender(<App />);
     rerender(<App />);
-
-    flushEffects();
 
     expect(updateCount).toEqual(2);
     expect(effectCount).toEqual(3);
