@@ -4,6 +4,10 @@
 
 There is a collection of React custom hooks, including lifecycle style hooks simulating `constructor`, `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`
 
+According to https://overreacted.io/a-complete-guide-to-useeffect/
+
+> Keep in mind that the mental model for effects is different from componentDidMount and other lifecycles, and trying to find their exact equivalents may confuse you more than help
+
 ## Install
 
 `npm install rhooks`
