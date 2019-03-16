@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect } from "react";
 import { cleanup, fireEvent, render } from "react-testing-library";
-import { useConstructor, useDidMount, useDidUpdate, useForceRender, useWillUnmount } from "../src/rhooks";
+import { useConstructor, useDidMount, useDidUpdate, useForceRender, useInterval, useWillUnmount } from "../src/rhooks";
 
 afterEach(cleanup);
 
@@ -95,7 +95,7 @@ describe("useWillUnmount", () => {
       return (<div></div>);
     };
 
-    const {unmount} = render(<App />);
+    const { unmount } = render(<App />);
     expect(unmountCount).toEqual(0);
     unmount();
     expect(unmountCount).toEqual(1);
@@ -120,12 +120,31 @@ describe("useForceRender", () => {
       return (<div onClick={() => forceRender()}></div>);
     };
 
-    const {container} = render(<App />);
+    const { container } = render(<App />);
     const div = container.querySelector("div");
     fireEvent.click(div);
     fireEvent.click(div);
     fireEvent.click(div);
     fireEvent.click(div);
     expect(renderCount).toEqual(5);
+  });
+});
+
+describe("useInterval", () => {
+  it("should ", (done) => {
+    let count = 0;
+    const App = () => {
+      useInterval(() => {
+        count++;
+      }, 100);
+      return <></>;
+    };
+
+    render(<App />);
+
+    setTimeout(() => {
+      expect(count).toEqual(4);
+      done();
+    }, 510);
   });
 });
