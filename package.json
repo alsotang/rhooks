@@ -1,6 +1,6 @@
 {
   "name": "rhooks",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "custom react hooks including class lifecycle style",
   "main": "lib/rhooks.js",
   "scripts": {

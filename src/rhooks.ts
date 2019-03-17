@@ -44,8 +44,8 @@ export function useForceRender() {
 }
 
 // according tohttps://overreacted.io/making-setinterval-declarative-with-react-hooks/
-export function useInterval(callback: () => void, delay: number) {
-    const savedCallback = useRef<typeof callback>();
+export function useInterval<T extends Function>(callback: T, delay: number) {
+    const savedCallback = useRef<T>();
 
     // Remember the latest callback.
     useEffect(() => {
