@@ -143,7 +143,7 @@ describe("useInterval", () => {
     render(<App />);
 
     setTimeout(() => {
-      expect(count).toEqual(4);
+      expect(count).toEqual(5);
       done();
     }, 510);
   });
